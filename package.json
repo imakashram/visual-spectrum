@@ -1,13 +1,36 @@
 {
 	"name": "visual-spectrum",
 	"private": true,
-	"version": "0.0.1",
+	"version": "0.1.0",
+	"description": "Visual Spectrum is a project that transforms data into clear, simple, and interactive visuals, making information easier to understand and explore.",
 	"license": "GPL-3.0-or-later",
+	"author": "Akash Ram <inbox2imakashram@gmail.com>",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/imakashram/visual-spectrum.git"
+	},
+	"bugs": {
+		"url": "https://github.com/imakashram/visual-spectrum/issues"
+	},
+	"homepage": "https://github.com/imakashram/visual-spectrum#readme",
+	"keywords": [
+		"data-visualization",
+		"sveltekit",
+		"tailwindcss",
+		"typescript",
+		"webapp"
+	],
+	"engines": {
+		"node": ">=20.19.0",
+		"npm": ">=10.0.0"
+	},
+	"packageManager": "npm@10",
 	"type": "module",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
+		"ci": "npm run check && npm run lint && npm run build",
 		"prepare": "svelte-kit sync || echo ''",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
