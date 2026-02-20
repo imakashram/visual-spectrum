@@ -1,3 +1,8 @@
-# allow crawling everything by default
+# Global rules for all search engines
 User-agent: *
-Disallow:
+
+# Allow full site access
+Allow: /
+
+# Sitemap (For future)
+Sitemap: https://visualspectrum.dev/sitemap.xml
