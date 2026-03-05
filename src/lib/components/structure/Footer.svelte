@@ -14,15 +14,15 @@
 	const footerNote = $derived(config.footerNote);
 </script>
 
-<footer class={`border-t border-slate-200 bg-white text-slate-700 ${className}`} aria-label="Site footer">
-	<div class="mx-auto w-full max-w-7xl px-4 py-5 sm:px-6 lg:px-8">
-		<div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-			<div class="space-y-1">
-				<p class="text-xs text-slate-500 sm:text-sm">
+<footer class={`footer-shell ${className}`} aria-label="Site footer">
+	<div class="footer-container">
+		<div class="footer-row">
+			<div class="footer-copy-stack">
+				<p class="footer-meta-text type-body-sm">
 					{#if attribution}
-						© {attribution.startYear} {attribution.projectName} by
+						© {attribution.startYear}<span class="footer-project-name">{attribution.projectName}</span>by
 						<a
-							class="font-medium text-slate-700 hover:text-slate-900 hover:underline"
+							class="footer-meta-link fw-medium"
 							href={attribution.authorUrl}
 							target="_blank"
 							rel="noopener noreferrer external"
@@ -31,7 +31,7 @@
 						</a>
 						licensed under
 						<a
-							class="font-medium text-slate-700 hover:text-slate-900 hover:underline"
+							class="footer-meta-link fw-medium"
 							href={attribution.licenseUrl}
 							target="_blank"
 							rel="noopener noreferrer external"
@@ -42,10 +42,10 @@
 				</p>
 
 				{#if footerNote}
-					<p class="text-xs text-slate-500 sm:text-sm">
+					<p class="footer-meta-text type-caption">
 						{footerNote.prefixText}
 						<a
-							class="font-medium text-slate-700 hover:text-slate-900 hover:underline"
+							class="footer-meta-link fw-medium"
 							href={footerNote.frameworkUrl}
 							target="_blank"
 							rel="noopener noreferrer external"
@@ -54,7 +54,7 @@
 						</a>
 						{footerNote.middleText}
 						<a
-							class="font-medium text-slate-700 hover:text-slate-900 hover:underline"
+							class="footer-meta-link fw-medium"
 							href={footerNote.hostingUrl}
 							target="_blank"
 							rel="noopener noreferrer external"
@@ -66,10 +66,10 @@
 			</div>
 
 			{#if config.socialLinks.length > 0}
-				<ul class="flex flex-wrap gap-2" aria-label="Social links">
+				<ul class="footer-social-list" aria-label="Social links">
 					{#each config.socialLinks as link (`${link.label}-${link.href}`)}
 						<li>
-							<SocialLink link={link} class="h-8 w-8" iconClass="h-3.5 w-3.5" />
+							<SocialLink link={link} class="social-link-compact" iconClass="social-link-icon" />
 						</li>
 					{/each}
 				</ul>

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { resolve } from '$app/paths';
 	import type { FooterLink } from '$lib/types/types';
 	import blueskyIcon from '$lib/assets/images/icons/bluesky.svg';
 	import emailIcon from '$lib/assets/images/icons/email.svg';
@@ -47,14 +48,15 @@
 	const iconSource = $derived(platform ? SOCIAL_ICONS[platform] : undefined);
 
 	const isExternal = $derived(link.external ?? EXTERNAL_PATTERN.test(link.href.trim()));
+	const href = $derived(isExternal ? link.href.trim() : resolve(link.href.trim() as any));
 	const target = $derived(isExternal ? '_blank' : undefined);
 	const rel = $derived(isExternal ? 'noopener noreferrer external' : undefined);
 	const fallbackInitial = $derived(link.label.trim().charAt(0).toUpperCase() || '?');
 </script>
 
 <a
-	href={link.href}
-	class={`inline-flex size-9 items-center justify-center rounded-full border border-slate-200 text-slate-600 transition-colors hover:border-slate-300 hover:text-slate-900 ${className}`}
+	href={href}
+	class={`social-link-btn ${className}`}
 	title={link.label}
 	aria-label={link.label}
 	target={target}
@@ -63,7 +65,7 @@
 	{#if iconSource}
 		<img class={iconClass} src={iconSource} alt="" loading="lazy" aria-hidden="true" />
 	{:else}
-		<span class="text-xs font-semibold uppercase" aria-hidden="true">{fallbackInitial}</span>
+		<span class="type-caption fw-semibold uppercase" aria-hidden="true">{fallbackInitial}</span>
 	{/if}
 	<span class="sr-only">{link.label}</span>
 </a>
