@@ -84,8 +84,7 @@
 
 <style>
 	.footer-shell {
-		border-top: var(--border-width-1) solid var(--color-border-subtle);
-		background-color: var(--color-surface);
+		background-color: var(--color-brand-background);
 		color: var(--color-text-primary);
 	}
 
@@ -93,7 +92,7 @@
 		width: 100%;
 		max-width: var(--container-max-width-7xl);
 		margin-inline: auto;
-		padding: var(--space-5) var(--space-4);
+		padding: var(--space-4);
 	}
 
 	.footer-row {
@@ -111,7 +110,7 @@
 	}
 
 	.footer-meta-text {
-		color: var(--color-text-muted);
+		color: var(--color-text-strong);
 		max-width: 60ch;
 	}
 
@@ -121,7 +120,7 @@
 
 	.footer-meta-link:hover {
 		color: var(--color-link-hover);
-		text-decoration: underline;
+		text-decoration: none;
 	}
 
 	.footer-project-name {
@@ -131,7 +130,7 @@
 		border-radius: var(--radius-sm);
 		border: var(--border-width-1) solid var(--color-highlight-border);
 		background-color: var(--color-highlight-bg);
-		color: var(--color-highlight-text);
+		color: var(--color-text-strong);
 		font-weight: var(--font-weight-semibold);
 	}
 
@@ -145,6 +144,7 @@
 	@media (min-width: 640px) {
 		.footer-container {
 			padding-inline: var(--space-6);
+			padding-block: var(--space-5);
 		}
 
 		.footer-row {

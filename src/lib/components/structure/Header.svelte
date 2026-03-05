@@ -105,8 +105,7 @@
 
 <style>
 	.header-shell {
-		border-bottom: var(--border-width-1) solid var(--color-border-subtle);
-		background-color: var(--color-surface);
+		background-color: var(--color-brand-background);
 	}
 
 	.header-container {
@@ -166,6 +165,7 @@
 	@media (min-width: 640px) {
 		.header-container {
 			padding-inline: var(--space-6);
+			padding-block: var(--space-5);
 			flex-direction: row;
 		}
 	}

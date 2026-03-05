@@ -3,14 +3,15 @@
 	--color-text-primary: #334155;
 	--color-text-secondary: #475569;
 	--color-text-muted: #64748b;
-	--color-text-strong: #0f172a;
-	--color-border-subtle: #e2e8f0;
-	--color-border-muted: #cbd5e1;
-	--color-link: #2563eb;
-	--color-link-hover: #1d4ed8;
-	--color-highlight-bg: #fef3c7;
-	--color-highlight-text: #92400e;
-	--color-highlight-border: #f59e0b;
+	--color-text-strong: #000000;
+	--color-border-subtle: #f3de98;
+	--color-border-muted: #e8c45d;
+	--color-link: #1d4ed8;
+	--color-link-hover: #1e40af;
+	--color-highlight-bg: #fff9e3;
+	--color-highlight-text: #7a4c00;
+	--color-highlight-border: #e8c45d;
+	--color-brand-background: #F7CF47;
 
 	--space-1: 0.25rem;
 	--space-2: 0.5rem;

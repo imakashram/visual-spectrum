@@ -61,8 +61,12 @@
 	}
 
 	a {
-		text-decoration: underline;
-		text-underline-offset: 0.12em;
+		color: var(--color-link);
+		text-decoration: none;
+	}
+
+	a:hover {
+		color: var(--color-link-hover);
 	}
 }
 
