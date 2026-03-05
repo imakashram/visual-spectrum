@@ -1,0 +1,5 @@
+:root {
+	--font-family-base: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+	--font-family-data-viz: 'IBM Plex Mono', 'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono',
+		'Courier New', monospace;
+}
