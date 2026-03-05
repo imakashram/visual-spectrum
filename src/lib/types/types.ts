@@ -27,3 +27,22 @@ export type FooterConfig = {
 	footerAttribution?: FooterAttribution;
 	footerNote?: FooterNote;
 };
+
+export type HeaderLink = {
+	label: string;
+	href: string;
+	external?: boolean;
+};
+
+export type HeaderBrand = {
+	label: string;
+	href: string;
+	logoSrc?: string;
+	logoAlt?: string;
+};
+
+export type HeaderConfig = {
+	brand?: HeaderBrand;
+	links: HeaderLink[];
+	ariaLabel?: string;
+};
