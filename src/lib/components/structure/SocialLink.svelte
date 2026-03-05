@@ -69,3 +69,32 @@
 	{/if}
 	<span class="sr-only">{link.label}</span>
 </a>
+
+<style>
+	.social-link-btn {
+		display: inline-flex;
+		width: var(--size-social-link);
+		height: var(--size-social-link);
+		align-items: center;
+		justify-content: center;
+		border-radius: var(--radius-full);
+		border: var(--border-width-1) solid var(--color-border-subtle);
+		color: var(--color-text-secondary);
+		transition: color 0.2s ease, border-color 0.2s ease;
+	}
+
+	.social-link-btn:hover {
+		border-color: var(--color-border-muted);
+		color: var(--color-text-strong);
+	}
+
+	.social-link-compact {
+		width: var(--size-social-link-compact);
+		height: var(--size-social-link-compact);
+	}
+
+	.social-link-icon {
+		width: var(--size-social-icon);
+		height: var(--size-social-icon);
+	}
+</style>

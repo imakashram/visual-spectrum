@@ -20,7 +20,9 @@
 			<div class="footer-copy-stack">
 				<p class="footer-meta-text type-body-sm">
 					{#if attribution}
-						© {attribution.startYear}<span class="footer-project-name">{attribution.projectName}</span>by
+						© {attribution.startYear}
+						<span class="footer-project-name">{attribution.projectName}</span>
+						by
 						<a
 							class="footer-meta-link fw-medium"
 							href={attribution.authorUrl}
@@ -29,7 +31,9 @@
 						>
 							{attribution.authorName}
 						</a>
+						{' '}
 						licensed under
+						{' '}
 						<a
 							class="footer-meta-link fw-medium"
 							href={attribution.licenseUrl}
@@ -77,3 +81,92 @@
 		</div>
 	</div>
 </footer>
+
+<style>
+	.footer-shell {
+		border-top: var(--border-width-1) solid var(--color-border-subtle);
+		background-color: var(--color-surface);
+		color: var(--color-text-primary);
+	}
+
+	.footer-container {
+		width: 100%;
+		max-width: var(--container-max-width-7xl);
+		margin-inline: auto;
+		padding: var(--space-5) var(--space-4);
+	}
+
+	.footer-row {
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-3);
+		align-items: center;
+		text-align: center;
+	}
+
+	.footer-copy-stack {
+		display: grid;
+		gap: var(--space-1);
+		justify-items: center;
+	}
+
+	.footer-meta-text {
+		color: var(--color-text-muted);
+		max-width: 60ch;
+	}
+
+	.footer-meta-link {
+		color: var(--color-link);
+	}
+
+	.footer-meta-link:hover {
+		color: var(--color-link-hover);
+		text-decoration: underline;
+	}
+
+	.footer-project-name {
+		display: inline-block;
+		margin-inline: var(--space-1);
+		padding: 0.08rem var(--space-2);
+		border-radius: var(--radius-sm);
+		border: var(--border-width-1) solid var(--color-highlight-border);
+		background-color: var(--color-highlight-bg);
+		color: var(--color-highlight-text);
+		font-weight: var(--font-weight-semibold);
+	}
+
+	.footer-social-list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--space-2);
+		justify-content: center;
+	}
+
+	@media (min-width: 640px) {
+		.footer-container {
+			padding-inline: var(--space-6);
+		}
+
+		.footer-row {
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+			text-align: left;
+			gap: var(--space-4);
+		}
+
+		.footer-copy-stack {
+			justify-items: start;
+		}
+
+		.footer-social-list {
+			justify-content: flex-end;
+		}
+	}
+
+	@media (min-width: 1024px) {
+		.footer-container {
+			padding-inline: var(--space-8);
+		}
+	}
+</style>
