@@ -1,1 +1,3 @@
-// place files you want to import through the `$lib` alias in this folder.
+export * from '$lib/components/structure';
+export * from '$lib/config/footer';
+export * from '$lib/types/types';

@@ -1,6 +1,13 @@
 <script lang="ts">
 	import '../app.css';
+	import { Footer } from '$lib';
 
 	let { children } = $props();
 </script>
-{@render children()}
+
+<div class="flex min-h-screen flex-col">
+	<main class="flex-1">
+		{@render children()}
+	</main>
+	<Footer />
+</div>
