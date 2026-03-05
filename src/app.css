@@ -3,6 +3,7 @@
 @plugin '@tailwindcss/typography';
 @import './lib/assets/css/fonts.css';
 @import './lib/assets/css/tokens.css';
+@import './lib/assets/css/style.css';
 
 :root {
 	font-family: var(--font-family-base);
