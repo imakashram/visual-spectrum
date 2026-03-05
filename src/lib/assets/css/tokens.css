@@ -12,6 +12,9 @@
 	--color-highlight-text: #7a4c00;
 	--color-highlight-border: #e8c45d;
 	--color-brand-background: #F7CF47;
+	--color-footer-background: #000000;
+	--color-footer-text: #ffffff;
+	--color-footer-text-muted: #e5e5e5;
 
 	--space-1: 0.25rem;
 	--space-2: 0.5rem;

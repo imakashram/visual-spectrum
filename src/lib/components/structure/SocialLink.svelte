@@ -46,6 +46,9 @@
 	const normalizedLabel = $derived(link.label.trim().toLowerCase());
 	const platform = $derived(link.platform ?? LABEL_TO_PLATFORM[normalizedLabel]);
 	const iconSource = $derived(platform ? SOCIAL_ICONS[platform] : undefined);
+	const forceWhiteIcon = $derived(
+		platform === 'website' || platform === 'github' || platform === 'x' || platform === 'email'
+	);
 
 	const isExternal = $derived(link.external ?? EXTERNAL_PATTERN.test(link.href.trim()));
 	const href = $derived(isExternal ? link.href.trim() : resolve(link.href.trim() as any));
@@ -63,7 +66,13 @@
 	rel={rel}
 >
 	{#if iconSource}
-		<img class={iconClass} src={iconSource} alt="" loading="lazy" aria-hidden="true" />
+		<img
+			class={`${iconClass} ${forceWhiteIcon ? 'social-icon-white' : ''}`}
+			src={iconSource}
+			alt=""
+			loading="lazy"
+			aria-hidden="true"
+		/>
 	{:else}
 		<span class="type-caption fw-semibold uppercase" aria-hidden="true">{fallbackInitial}</span>
 	{/if}
@@ -96,5 +105,9 @@
 	.social-link-icon {
 		width: var(--size-social-icon);
 		height: var(--size-social-icon);
+	}
+
+	.social-icon-white {
+		filter: brightness(0) invert(1);
 	}
 </style>

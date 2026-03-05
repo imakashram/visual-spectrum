@@ -20,7 +20,7 @@
 			<div class="footer-copy-stack">
 				<p class="footer-meta-text type-body-sm">
 					{#if attribution}
-						© {attribution.startYear}
+						©{attribution.startYear}
 						<span class="footer-project-name">{attribution.projectName}</span>
 						by
 						<a
@@ -84,8 +84,8 @@
 
 <style>
 	.footer-shell {
-		background-color: var(--color-brand-background);
-		color: var(--color-text-primary);
+		background-color: var(--color-footer-background);
+		color: var(--color-footer-text);
 	}
 
 	.footer-container {
@@ -110,7 +110,7 @@
 	}
 
 	.footer-meta-text {
-		color: var(--color-text-strong);
+		color: var(--color-footer-text);
 		max-width: 60ch;
 	}
 
@@ -128,10 +128,20 @@
 		margin-inline: var(--space-1);
 		padding: 0.08rem var(--space-2);
 		border-radius: var(--radius-sm);
-		border: var(--border-width-1) solid var(--color-highlight-border);
-		background-color: var(--color-highlight-bg);
-		color: var(--color-text-strong);
+		border: var(--border-width-1) solid var(--color-footer-text);
+		background-color: transparent;
+		color: var(--color-footer-text);
 		font-weight: var(--font-weight-semibold);
+	}
+
+	.footer-shell :global(.social-link-btn) {
+		border-color: var(--color-footer-text);
+		color: var(--color-footer-text);
+	}
+
+	.footer-shell :global(.social-link-btn:hover) {
+		border-color: var(--color-footer-text-muted);
+		color: var(--color-footer-text-muted);
 	}
 
 	.footer-social-list {
