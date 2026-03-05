@@ -13,7 +13,17 @@ export type FooterAttribution = {
 	licenseUrl: string;
 };
 
+export type FooterNote = {
+	prefixText: string;
+	frameworkLabel: string;
+	frameworkUrl: string;
+	middleText: string;
+	hostingLabel: string;
+	hostingUrl: string;
+};
+
 export type FooterConfig = {
 	socialLinks: FooterLink[];
 	footerAttribution?: FooterAttribution;
+	footerNote?: FooterNote;
 };

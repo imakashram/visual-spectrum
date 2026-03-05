@@ -16,5 +16,13 @@ export const defaultFooterConfig: FooterConfig = {
 		authorUrl: 'https://insightcrust.com/',
 		licenseName: 'CC BY-NC 4.0',
 		licenseUrl: 'https://creativecommons.org/licenses/by-nc/4.0/'
+	},
+	footerNote: {
+		prefixText: 'This page is built using',
+		frameworkLabel: 'SvelteKit',
+		frameworkUrl: 'https://kit.svelte.dev/',
+		middleText: 'and is hosted on',
+		hostingLabel: 'Netlify',
+		hostingUrl: 'https://www.netlify.com/'
 	}
 };
