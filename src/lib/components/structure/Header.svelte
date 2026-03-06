@@ -128,11 +128,11 @@
 		text-decoration: none;
 	}
 
-	.header-brand-logo {
-		width: 1.375rem;
-		height: 1.375rem;
-		flex-shrink: 0;
-	}
+.header-brand-logo {
+	height: 2.5rem;
+	width: auto;
+	flex-shrink: 0;
+}
 
 	.header-nav-list {
 		display: flex;
